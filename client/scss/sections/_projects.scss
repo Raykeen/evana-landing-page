@@ -1,0 +1,23 @@
+@import "../custom-bootstrap/variables";
+@import "~bootstrap/scss/mixins";
+@import "../utils/convert-function";
+
+//
+// PROJECTS
+//
+
+.lp-projects {
+  @extend .lp-section, .container;
+  padding-top: prem(60);
+  padding-bottom: prem(30);
+
+  @include media-breakpoint-up(md) {
+    padding-top: prem(112);
+    padding-bottom: prem(72);
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding-top: prem(135);
+  }
+}
+

@@ -1,0 +1,49 @@
+@import "../custom-bootstrap/variables";
+@import "~bootstrap/scss/mixins";
+@import "../utils/convert-function";
+
+//
+// FEATURED
+//
+
+.lp-featured {
+  @extend .lp-section;
+}
+
+.lp-featured__bkg {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url("../../img/plant.jpg") top left no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+
+  @include media-breakpoint-up(xl) {
+    width: 1045px;
+    height: 504px;
+  }
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba($secondary, 0.36);
+  }
+}
+
+.lp-featured__block {
+  @extend .col-xl-7;
+
+  padding-top: prem(57);
+  padding-bottom: prem(57);
+
+  @include media-breakpoint-up(xl) {
+    padding-top: prem(186);
+  }
+}

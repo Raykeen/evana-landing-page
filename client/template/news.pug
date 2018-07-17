@@ -1,0 +1,39 @@
+-
+    var news = [
+        {
+            header: 'Evana comes in a moment of new year and brings happiness',
+            date: 'January 01, 2018',
+            img: '../img/news1.jpg',
+            link: '/news1'
+        },
+        {
+            header: 'Evana is a great and gorgeous template for your own website',
+            date: 'December 31, 2017',
+            img: '../img/news2.jpg',
+            link: '/news2'
+        },
+        {
+            header: 'Rebuild your website with the extreme possibilities of Evana',
+            date: 'December 31, 2017',
+            img: '../img/news3.jpg',
+            link: '/news3'
+        }
+    ]
+
+section#news.lp-news
+    header.container
+        .row.justify-content-center
+            .col-md-9.col-lg-6.text-center
+                h4.text-primary.mb-4 Latest News
+                p.lead.mb-5 Excepteur sint occaecat cupidatat non proid ent, sunt in culpa qui officia deserunt mollit anim
+    .container.half-gutters
+        .row
+            each article in news
+                .col-md-4
+                    article.mb-4
+                        img.img-fluid.mb-3(src=article.img)
+                        h6.mb-2.mb-md-3 #{article.header}
+                        hr.mb-2.mt-2.mt-md-3
+                        footer.d-flex.justify-content-between
+                            span #{article.date}
+                            a(href=article.link).lp-btn Read More

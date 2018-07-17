@@ -1,0 +1,5 @@
+@import "../custom-bootstrap/index";
+
+.lp-service {
+  @extend .lp-section, .container
+}

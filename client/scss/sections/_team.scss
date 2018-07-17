@@ -1,0 +1,29 @@
+@import "../custom-bootstrap/variables";
+@import "~bootstrap/scss/mixins";
+@import "../utils/convert-function";
+
+//
+// TEAM
+//
+
+.lp-team {
+  border-top: 1px solid $gray-200;
+}
+
+.lp-member {
+  @extend .col-6, .col-lg-3;
+
+  margin-bottom: prem(32);
+
+  @include media-breakpoint-up(sm){
+    margin-bottom: prem(93);
+  }
+}
+
+.lp-member:nth-child(even) {
+  margin-top: prem(180);
+
+  @include media-breakpoint-up(sm){
+    margin-top: prem(240);
+  }
+}

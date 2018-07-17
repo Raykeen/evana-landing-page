@@ -1,0 +1,64 @@
+@import "../custom-bootstrap/index";
+@import "../utils/convert-function";
+
+.lp-top-navbar {
+  @extend .fixed-top;
+
+  transition: background-color 0.3s ease-out;
+
+  .navbar {
+    transition: padding 0.3s ease-out;
+  }
+
+  &.lp-top-navbar_scrolled {
+    background-color: rgba($secondary, 0.60);
+
+    .navbar {
+      padding-top: prem(5);
+      padding-bottom: prem(5);
+    }
+  }
+}
+
+#side-menu {
+  z-index: 2010;
+  padding: 40px 0 0 0;
+
+  .close {
+    border: none;
+    background: none;
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    padding: 0;
+    right: 20px;
+    top: 0;
+    color: gray("700");
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: gray("900");
+    }
+  }
+
+  .navbar-nav {
+    width: 100%;
+  }
+
+  .nav-link {
+    padding: 1rem 2rem;
+
+    &.active{
+      background-color: rgba(gray("900"), 0.2);
+    }
+  }
+}
+
+.side-menu-overlay {
+  z-index: 2000;
+}

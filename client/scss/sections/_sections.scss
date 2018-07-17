@@ -1,0 +1,14 @@
+@import "../custom-bootstrap/variables";
+
+//
+// Sections
+//
+
+.lp-section {
+  position: relative;
+}
+
+.lp-section_highlighted {
+  @extend .lp-section;
+  background-color: $highlight;
+}

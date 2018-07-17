@@ -1,0 +1,81 @@
+@import "../custom-bootstrap/variables";
+@import "~bootstrap/scss/mixins";
+@import "../utils/convert-function";
+
+//
+// FEEDBACK
+//
+.lp-feedback {
+  @extend .lp-section_highlighted;
+}
+
+.lp-member__caption {
+  position: absolute;
+  width: 100%;
+  transform: rotate(-90.0deg);
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .lp-member:nth-child(odd) & {
+    transform-origin: top right;
+    top: 0;
+    text-align: right;
+  }
+
+  .lp-member:nth-child(even) & {
+    transform-origin: bottom left;
+    bottom: 0;
+    text-align: left;
+    left: -$grid-gutter-width / 4;
+  }
+}
+
+.lp-feedback__block {
+  padding: prem(40) prem(20);
+  height: prem(550);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include media-breakpoint-up(lg) {
+    padding: prem(50);
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: prem(118) prem(220) prem(95);
+    height: prem(750);
+  }
+  text-align: center;
+}
+
+.lp-feedback__message {
+  @include media-breakpoint-down(sm) {
+    font-size: $font-size-sm;
+  };
+
+  font-size: $font-size-lg;
+  font-style: italic;
+}
+
+.lp-person {
+  display: inline-flex;
+  text-align: left;
+}
+
+.lp-person__ava {
+  width: prem(48);
+  height: prem(48);
+  border-radius: 100%;
+  margin-right: prem(23);
+}
+
+.lp-person__name {
+  margin-bottom: pem(7);
+}
+
+.lp-person__job {
+  font-size: $font-size-sm;
+}

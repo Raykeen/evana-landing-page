@@ -1,0 +1,100 @@
+@import "../custom-bootstrap/index";
+@import "../utils/convert-function";
+
+
+//
+// HEADER
+//
+
+.lp-header {
+  @extend .jumbotron;
+
+  background-color: $secondary;
+  background: url("../../img/header.jpg") center top no-repeat fixed;
+  background-size: cover;
+  padding-top: 0;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  min-height: 550px;
+
+  @include media-breakpoint-up(md) {
+    min-height: 770px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    min-height: 850px;
+  }
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url("../../img/memphis.svg") -300px bottom repeat-x,
+    rgba($secondary, 0.60);
+
+    background-size: 1920px;
+
+    @include media-breakpoint-up(xl) {
+      background-position: center bottom;
+    }
+  }
+
+  .lp-header__display {
+    @extend .display-4;
+
+    color: $gray-700;
+    opacity: 0.12;
+
+    margin-left: 195px;
+    margin-top: 65px;
+
+    @include media-breakpoint-down(xl) {
+      display: none;
+    }
+  }
+}
+
+.lp-calltoaction {
+  position: relative;
+  margin-top: 65px;
+
+  @include media-breakpoint-up(md) {
+    width: 565px;
+    border: solid #f4f4fd 12px;
+    padding: 60px;
+
+    .lp-calltoaction__body {
+      width: 600px;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .lp-calltoaction__body {
+      width: 670px;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: 617px;
+    padding: 68px 0 70px 110px;
+    margin-left: -118px;
+  }
+
+  .lp-calltoaction__p {
+    font-size: $font-size-lg;
+
+    @include media-breakpoint-down(xs) {
+      font-size: $font-size-sm;
+    }
+
+    color: black;
+    line-height: 1.75;
+    margin-top: prem(20);
+    margin-bottom: prem(54);
+  }
+}

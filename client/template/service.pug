@@ -1,0 +1,44 @@
+-
+    var features = [
+        {
+            header: 'Film Making',
+            icon: '../img/film.svg'
+        },
+        {
+            header: 'Audio Recodring',
+            icon: '../img/headphones-microphone.svg'
+        },
+        {
+            header: 'Web Design',
+            icon: '../img/handbag.svg'
+        },
+        {
+            header: 'Online Security',
+            icon: '../img/lock.svg'
+        }
+    ]
+
+section#service.lp-service
+    .row.justify-content-center
+        header.col-sm-10.col-lg-6.text-center.my-5
+            h4.text-primary.pb-1 Service
+
+            p.lead.
+                Excepteur sint occaecat cupidatat non proid ent,
+                sunt in culpa qui officia deserunt mollit anim
+
+    .row
+        for feature in features
+            .col-lg-6
+                .card.mb-5
+                    .card-body.d-flex.flex-column.flex-sm-row.align-items-center.align-items-sm-start
+                        img.lp-icon.mb-3.mr-sm-3(src=feature.icon, alt='film icon')
+
+                        div
+                            h6.card-title #{feature.header}
+
+                            p.card-text.pb-2.
+                                Lorem ipsum dolor sit amet, conseetur adipisic ing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+
+                            a.lp-btn.lp-btn_next.lp-btn_sm(href='') Read More

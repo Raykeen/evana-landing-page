@@ -1,0 +1,80 @@
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-brands";
+
+$facebook-color: #3b5998;
+$twitter-color: #1da1f2;
+$google-color: #dd4b39;
+$linkedin-color: #0077b5;
+
+$social-hover-lighten: 10%;
+
+%lp-social {
+  @extend .fab;
+
+  &:before {
+    display: block;
+    font-size: prem(24);
+    padding: pem(9, 24);
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.lp-social-wrapper {
+  margin-left: prem(-9);
+  margin-right: prem(-9);
+}
+
+.lp-social_facebook {
+  @extend %lp-social;
+
+  &:before {
+    content: fa-content($fa-var-facebook-f);
+    color: $facebook-color;
+  }
+
+  &:hover:before {
+    color: lighten($facebook-color, $social-hover-lighten)
+  }
+}
+
+.lp-social_twitter {
+  @extend %lp-social;
+
+  &:before {
+    content: fa-content($fa-var-twitter);
+    color: $twitter-color;
+  }
+
+  &:hover:before {
+    color: lighten($twitter-color, $social-hover-lighten)
+  }
+}
+
+.lp-social_google {
+  @extend %lp-social;
+
+  &:before {
+    content: fa-content($fa-var-google-plus-g);
+    color: $google-color;
+  }
+
+  &:hover:before {
+    color: lighten($google-color, $social-hover-lighten)
+  }
+}
+
+.lp-social_linkedin {
+  @extend %lp-social;
+
+  &:before {
+    content: fa-content($fa-var-linkedin-in);
+    color: $linkedin-color;
+  }
+
+  &:hover:before {
+    color: lighten($linkedin-color, $social-hover-lighten)
+  }
+}

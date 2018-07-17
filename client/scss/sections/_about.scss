@@ -1,0 +1,113 @@
+@import "../custom-bootstrap/index";
+@import "../utils/convert-function";
+
+//
+// ABOUT
+//
+.lp-about {
+  @extend .lp-section, .container;
+
+  position: relative;
+
+  .lp-about__row {
+    @extend .row;
+    padding-top: prem(60);
+  }
+
+  .lp-about__first {
+    @extend .col-md-5, .offset-md-1;
+    margin-bottom: prem(40);
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+  }
+
+  .lp-about__second {
+    @extend .col-md;
+    margin-bottom: prem(40);
+  }
+
+  @include media-breakpoint-up(md) {
+    .lp-about__row {
+      padding-top: prem(122);
+    }
+
+    .lp-about__first {
+      margin-bottom: prem(86);
+    }
+
+    .lp-about__second {
+      margin-top: prem(-194);
+      margin-bottom: prem(86);
+    }
+  }
+}
+
+.lp-about__display {
+  top: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  font-family: $headings-font-family;
+  font-weight: 700;
+  user-select: none;
+  height: 100%;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  .lp-about__display-1 {
+    margin-left: -179px;
+    font-size: 848px;
+    color: $highlight;
+    position: relative;
+    line-height: 607px;
+    text-transform: uppercase;
+    transform: scaleX(-1);
+  }
+
+  .lp-about__display-2 {
+    margin-left: -511px;
+    position: relative;
+    color: lighten($primary, 40%);
+    font-size: 135px;
+    text-transform: uppercase;
+    transform: rotate(-90.0deg);
+
+    @include media-breakpoint-up(md) {
+      text-shadow: 0 12px 27.6px rgba(6, 7, 7, 0.12);
+      color: $primary;
+    }
+
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+  }
+}
+
+//
+// WHY WE ARE BEST
+//
+.lp-why {
+  @extend .lp-section_highlighted
+}
+
+.lp-why__row {
+  @extend .row, .justify-content-center;
+  padding-top: prem(50);
+
+  @include media-breakpoint-up(md) {
+    padding-top: prem(112);
+  }
+}
+
+.lp-why__first {
+  @extend .col-xl, .pb-5, .pb-xl-0;
+  @include media-breakpoint-up(xl) {
+    margin-bottom: prem(-62);
+  }
+}

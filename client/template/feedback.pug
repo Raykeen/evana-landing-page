@@ -1,0 +1,54 @@
+-
+    var feedbacks = [
+        {
+            header: 'This guys are awesome !',
+            message: `Liste natus error sit voluptatem accusantium dolor emque laudanti Lorem ipsum dolor
+                      sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                      dolore magna aliqua. Ut enim ad minim veniam`,
+            author: {
+                ava: '../img/ava1.jpg',
+                name: 'Anna Olivia',
+                job: 'Photographer'
+            }
+        },
+        {
+            header: 'This guys are awesome !',
+            message: `Liste natus error sit voluptatem accusantium dolor emque laudanti Lorem ipsum dolor
+                      sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                      dolore magna aliqua. Ut enim ad minim veniam. Liste natus error sit voluptatem accusantium dolor emque laudanti Lorem ipsum dolor
+                      sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                      dolore magna aliqua. Ut enim ad minim veniam`,
+            author: {
+                ava: '../img/ava1.jpg',
+                name: 'Anna Olivia',
+                job: 'Photographer'
+            }
+        }
+    ]
+
+section.lp-feedback
+    #carousel.carousel.slide(data-ride='carousel')
+        .container
+            .carousel-inner
+                each feedback, index in feedbacks
+                    .carousel-item(class= index === 0 ? "active" : "")
+                        .lp-feedback__block
+                            img.lp-icon.lp-icon_big.mb-1.mb-sm-5(src='../img/testimonial.svg', alt='')
+
+                            h5.mb-sm-4 #{feedback.header}
+
+                            p.lp-feedback__message #{feedback.message}
+
+                            .lp-person.mt-1.mt-sm-4
+                                img.lp-person__ava(src=feedback.author.ava)
+
+                                div
+                                    h6.lp-person__name #{feedback.author.name}
+
+                                    p.lp-person__job #{feedback.author.job}
+
+        a.carousel-control-prev(href='#carousel', role='button', data-slide='prev')
+            span.carousel-control-prev-icon
+
+        a.carousel-control-next(href='#carousel', role='button', data-slide='next')
+            span.carousel-control-next-icon

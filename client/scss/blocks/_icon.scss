@@ -1,0 +1,46 @@
+@import "../utils/convert-function";
+
+//
+// Icons
+//
+
+$icon-size: prem(48);
+$icon-size-big: prem(60);
+
+.lp-icon {
+  width: $icon-size;
+  height: $icon-size;
+
+  flex-shrink: 0;
+}
+
+.lp-icon_big {
+  width: $icon-size-big;
+  height: $icon-size-big;
+}
+
+.lp-icon-bkg {
+  display: block;
+  position: relative;
+
+  width: 64px;
+  height: 64px;
+
+  flex-shrink: 0;
+
+  &:before {
+    content: '';
+    display: block;
+    background-color: white;
+    width: $icon-size;
+    height: $icon-size;
+
+    border-radius: 100%;
+  }
+
+  & .lp-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

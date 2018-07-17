@@ -1,0 +1,44 @@
+-
+    var team_members = [
+        {
+            name: 'Jhonson Doe',
+            job: 'Founder &amp; CEO',
+            photo: '../img/team1.jpg'
+        },
+        {
+            name: 'Jane Doe',
+            job: 'Project Manager',
+            photo: '../img/team2.jpg'
+        },
+        {
+            name: 'Jessica Parker',
+            job: 'Developer',
+            photo: '../img/team3.jpg'
+        },
+        {
+            name: 'Tania Anderson',
+            job: 'Desiger',
+            photo: '../img/team4.jpg'
+        }
+    ]
+
+section#team.lp-team
+    .container
+        .row.justify-content-center
+            header.col-sm-10.col-lg-6.text-center.my-5
+                h4.text-primary.pb-1 Our Amazing Team
+
+                p.lead.
+                    Excepteur sint occaecat cupidatat non proid ent,
+                    sunt in culpa qui officia deserunt mollit anim
+
+    .container.half-gutters
+        .row
+            for member in team_members
+                figure.lp-member
+                    img.img-fluid(src=member.photo, alt='')
+
+                    figcaption.lp-member__caption
+                        h6.mb-1 #{member.name}
+
+                        p #{member.job}

@@ -1,0 +1,8 @@
+@import "sections";
+
+.lp-footer {
+  @extend .lp-section_highlighted;
+
+  padding-top: prem(90);
+  padding-bottom: prem(70);
+}

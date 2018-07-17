@@ -1,0 +1,107 @@
+@import "../custom-bootstrap/variables";
+@import "../../../node_modules/@fortawesome/fontawesome-free-webfonts/scss/fontawesome";
+@import "../../../node_modules/@fortawesome/fontawesome-free-webfonts/scss/fa-solid";
+@import "../../../node_modules/@fortawesome/fontawesome-free-webfonts/scss/fa-regular";
+@import "../utils/convert-function";
+
+//
+// Buttons
+//
+
+$base: convert($font-size-base, 'px', 16);
+
+.lp-btn {
+  display: inline-block;
+  position: relative;
+  font-family: $headings-font-family;
+  font-weight: bold;
+  color: $headings-color;
+  font-size: $font-size-base;
+  background-color: transparent;
+  border: none;
+  flex-shrink: 0;
+  flex-grow: 0;
+
+  &:hover {
+    background-color: transparent;
+    color: black;
+  }
+}
+
+.lp-btn_sm {
+  font-size: $font-size-sm;
+}
+
+//
+// SQUARE BUTTON
+//
+
+.lp-btn_square {
+  z-index: 0;
+  padding: pem(18, $base) pem(16, $base) pem(6, $base) 0;
+
+  &:before {
+    z-index: -1;
+    display: block;
+    position: absolute;
+    margin-right: 0;
+    top: 0;
+    right: 0;
+    content: '';
+    width: pem(48, $base);
+    height: pem(48, $base);
+    background-color: white;
+  }
+
+  &.lp-btn_square_primary:before {
+    background-color: $secondary;
+  }
+}
+
+//
+// NEXT BUTTON
+//
+
+.lp-btn_next {
+  padding: pem(4, $base) pem(52, $base) pem(5, $base) 0;
+
+  &:after {
+    @extend .fas;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    content: fa-content($fa-var-chevron-right);
+    text-align: center;
+    vertical-align: middle;
+    padding-top: pem(7, $base);
+
+    border: 2px solid $headings-color;
+    width: pem(36, $base);
+    height: pem(36, $base);
+  }
+}
+
+//
+// VIDEO BUTTON
+//
+
+.lp-btn_video {
+  padding: pem(18, $base) pem(68, $base) pem(6, $base) 0;
+
+  &:after {
+    @extend .fas;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    content: fa-content($fa-var-play);
+    text-align: left;
+    padding-top: pem(22, $base);
+    padding-left: pem(8, $base);
+    background-color: $secondary;
+    color: white;
+    width: pem(48, $base);
+    height: pem(48, $base);
+  }
+}

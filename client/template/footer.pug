@@ -1,0 +1,38 @@
+footer.lp-footer
+    .container
+        .row
+            .col-md-6.col-lg-5.order-last.order-md-first
+                h5.text-primary Evana
+                p.mb-4.
+                    Lorem ipsum dolor sit amet, consectetur adip isici
+                    ng elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim aend minim  amo
+                    veniam, quis nostrud exercitation
+                div.lp-social-wrapper
+                    a(href="https://www.facebook.com/").lp-social_facebook
+                    a(href="https://twitter.com/").lp-social_twitter
+                    a(href="https://plus.google.com/").lp-social_google
+                    a(href="https://ru.linkedin.com/").lp-social_linkedin
+                p.pt-5 All rights reserved © 2017 #[span.lp-copyright-logo-text Storm & Rain]
+
+            .col-md-2.d-none.d-lg-block
+                h6 About
+                nav.nav.flex-column
+                    a(href='#about').nav-link.js-smooth-scroll Our Story
+                    a(href='#team').nav-link.js-smooth-scroll Team Members
+                    a(href='#service').nav-link.js-smooth-scroll Service
+                    a(href='#').nav-link.js-smooth-scroll FAQ
+
+            .col-md-2.d-none.d-lg-block
+                h6 Quick Links
+                nav.nav.flex-column
+                    a(href='#about').nav-link.js-smooth-scroll Our Story
+                    a(href='#team').nav-link.js-smooth-scroll Team Members
+                    a(href='#').nav-link.js-smooth-scroll Lorem Ipsum
+                    a(href='#').nav-link.js-smooth-scroll Dolor sit
+
+            .col-md-6.col-lg-3
+                h6 Photo Gallery
+                .lp-gallery_small.mb-5
+                    each i in [1, 2, 3, 4, 5, 6]
+                        img.lp-gallery__img(src=`../img/gallery-thumb-${i}.jpg`)

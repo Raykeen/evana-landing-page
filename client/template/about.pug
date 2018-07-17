@@ -1,0 +1,71 @@
+section#about.lp-about
+    .lp-about__row
+        .lp-about__display
+            .lp-about__display-1 E
+
+            .lp-about__display-2 EVANA
+
+        .lp-about__first
+            h2 Your Website Needs A New Look in 2018
+
+            p.lead.
+                Excepteur sint occaecat cupidatat non proid ent,
+                sunt in culpa qui officia deserunt mollit anim id est
+                laborum tomare legese eto je bhalo chad bujhi ta jane !
+
+            a.lp-btn.lp-btn_square.lp-btn_square_primary.mt-auto(href='') Read More
+
+        .lp-about__second
+            img.img-fluid.lp_shadow.mb-3.mb-md-5(src='../img/about.jpg', alt='Work Hard')
+
+            p.mb-3.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusm od tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in repre Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+            p.
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                totam rem aperiam.
+
+-
+    var features = [
+        {
+            header: 'We use the latest technology',
+            icon: '../img/settings.svg'
+        },
+        {
+            header: 'We discuss more with you',
+            icon: '../img/bubbles.svg'
+        },
+        {
+            header: 'We deliver the task quickly',
+            icon: '../img/rocket.svg'
+        }
+    ]
+
+section.lp-why
+    .container
+        .lp-why__row
+            .lp-why__first
+                .row
+                    .col-md-6.col-xl-12
+                        h4.text-primary Why We Are Best
+                        p.lead.mb-md-5.
+                            Excepteur sint occaecat cupidatat non proid ent,
+                            sunt in culpa qui officia deserunt mollit anim id
+                            est laborum tomare le why this is great another.
+                    .col-md-6.col-xl-12
+                        img.img-fluid.lp_shadow(src='../img/features.jpg', width='100%')
+            .col-xl.col-lg-8.col-md-12.pb-md-4
+                for feature in features
+                    .d-flex.pl-xl-4
+                        .lp-icon-bkg
+                            img.lp-icon(src=feature.icon, alt='settings icon')
+                        .ml-3
+                            h6.mb-2 #{feature.header}
+                            p.mb-4.
+                                Liste natus error sit voluptatem accusantium dolor emque laudantium,
+                                totam rem aperiam, eaque ipsa quae ab illo inventore

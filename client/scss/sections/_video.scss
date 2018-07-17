@@ -1,0 +1,35 @@
+@import "../custom-bootstrap/variables";
+@import "~bootstrap/scss/mixins";
+@import "../utils/convert-function";
+
+//
+// VIDEO
+//
+
+.lp-video {
+  @extend .lp-section, .lp-overlay;
+  background: url("../../img/paralax.jpg") center top no-repeat fixed;
+  background-size: cover;
+  padding-bottom: prem(70);
+  overflow: hidden;
+  height: 500px;
+
+  @include media-breakpoint-up(md) {
+    height: 720px;
+  }
+}
+
+.lp-video__display {
+  position: absolute;
+  font-size: prem(383);
+  font-family: $headings-font-family;
+  font-weight: 700;
+  color: $gray-900;
+  opacity: 0.18;
+  margin-top: prem(37);
+  user-select: none;
+
+  @include media-breakpoint-up(xxl) {
+    margin-left: prem(-277);
+  }
+}

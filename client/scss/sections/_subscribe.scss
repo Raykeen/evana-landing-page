@@ -1,0 +1,33 @@
+@import "../utils/convert-function";
+@import "../custom-bootstrap/index";
+
+//
+// SUBSCRIBE
+//
+
+.lp-subscribe {
+  @extend .container, .lp-section;
+
+  padding-top: prem(68);
+  padding-bottom: prem(25);
+}
+
+.lp-subscribe-form {
+  @extend .input-group;
+
+  margin-top: prem(22);
+
+  & > .lp-subscribe-form__input {
+    min-width: 40%;
+    width: 64%;
+  }
+}
+
+
+.lp-subscribe-form__submit {
+  @extend .btn, .btn-secondary;
+
+  flex-grow: 1;
+}
+
+
